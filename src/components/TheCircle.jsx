@@ -9,7 +9,7 @@ import CrossLines from "../common/CrossLines";
 const CROSS_POINTS = {
   base: { x: "11%", y: "45%" },
   sm: { x: "8%", y: "10%" },
-  md: { x: "93%", y: "52%" },
+  md: { x: "8%", y: "45%" },
   lg: { x: "8%", y: "40%" },
 };
 
@@ -30,7 +30,7 @@ const TheCircle = () => {
       <div className="max-w-360 mx-auto h-full flex flex-col gap-6 items-start justify-center text-white pb-10 sm:pb-14 lg:pb-20 px-5 sm:px-8 lg:px-10">
         <div className="flex flex-col items-start w-full max-w-157.5 gap-5 sm:gap-6 lg:gap-8">
           <Reveal from="top" delay={0.5}>
-            <div className="flex flex-col items-start w-full max-w-157.5 gap-5 sm:gap-6 lg:gap-8 pb-5 md:pb-24">
+            <div className="flex flex-col items-start w-full max-w-157.5 gap-5 sm:gap-6 lg:gap-8 pb-5 md:pb-10">
               <h1>The Circle</h1>
               <h2>Twenty designers. Once a year. By invitation.</h2>
             </div>

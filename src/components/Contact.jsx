@@ -7,7 +7,7 @@ import Reveal from "../common/Reveal";
 import CrossLines from "../common/CrossLines";
 
 const CONTACT_CROSS_POINTS = {
-  base: { x: "20%", y: "50%" },
+  base: { x: "5%", y: "50%" },
   sm: { x: "5%", y: "50%" },
   md: { x: "5%", y: "50%" },
   lg: { x: "5%", y: "50%" },

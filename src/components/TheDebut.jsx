@@ -5,9 +5,9 @@ import Reveal from "../common/Reveal";
 import CrossLines from "../common/CrossLines";
 
 const CROSS_POINTS = {
-  base: { x: "88%", y: "45%" },
+  base: { x: "88%", y: "52%" },
   sm: { x: "80%", y: "10%" },
-  md: { x: "93%", y: "52%" },
+  md: { x: "90%", y: "67%" },
   lg: { x: "91%", y: "30%" },
 };
 

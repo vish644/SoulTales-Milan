@@ -7,9 +7,9 @@ import { useLocation } from "react-router-dom";
 import CrossLines from "../common/CrossLines";
 
 const CROSS_POINTS = {
-  base: { x: "88%", y: "45%" },
-  sm: { x: "80%", y: "10%" },
-  md: { x: "93%", y: "52%" },
+  base: { x: "11%", y: "42%" },
+  sm: { x: "11%", y: "42%" },
+  md: { x: "8%", y: "58%" },
   lg: { x: "8%", y: "25%" },
 };
 

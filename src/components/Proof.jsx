@@ -98,7 +98,7 @@ const Proof = () => {
 
         <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 max-w-sm mx-auto">
           {sectionOne.map((data, index) => (
-            <Reveal key={index} from="top" delay={0.35}>
+            <Reveal key={index} from="right" delay={0.35}>
               <ProofPoint {...data} />
             </Reveal>
           ))}
@@ -106,7 +106,7 @@ const Proof = () => {
 
         <div className="flex flex-col items-center justify-center gap-10 sm:gap-16 max-w-sm mx-auto  ">
           {sectionTwo.map((data, index) => (
-            <Reveal key={index} from="top" delay={0.35}>
+            <Reveal key={index} from="right" delay={0.35}>
               <ProofPoint {...data} />
             </Reveal>
           ))}

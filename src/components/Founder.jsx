@@ -5,7 +5,7 @@ import { fluid } from "../utils/Fluid";
 import Reveal from "../common/Reveal";
 import CrossLines from "../common/CrossLines";
 
-const CROSS_POINTS = {
+const FOUNDER_CROSS_POINTS = {
   base: { x: "8%", y: "50%" },
   sm: { x: "6%", y: "50%" },
   md: { x: "5%", y: "50%" },
@@ -24,7 +24,6 @@ const Founder = () => {
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-16">
         <div className="flex flex-col items-center text-center gap-5 sm:gap-6 max-w-7xl lg:pt-6">
           <h1 className="text-center text-white">Why I Built This</h1>
-
           <Reveal from="left" delay={0.75}>
             <div className="flex flex-col gap-4 leading-relaxed">
               <p className="text-xs sm:text-sm">
@@ -46,10 +45,7 @@ const Founder = () => {
               </p>
             </div>
           </Reveal>
-
-          {/* <div className="relative w-full flex items-center justify-center mt-4 sm:mt-6"> */}
-          {/* <div className="relative w-full flex items-center justify-center mt-4 sm:mt-6 h-16 sm:h-20 lg:h-50">
-           
+          {/* <div className="relative w-full flex items-center justify-center mt-4 sm:mt-6 ">
             <CrossLines
               crossPoints={HERO_CROSS_POINTS}
               horizontalLengths={H_LENGTHS}
@@ -64,22 +60,22 @@ const Founder = () => {
               </span>
             </div>
           </div> */}
-
-          <div className="relative w-full flex items-center justify-center mt-4 sm:mt-6 h-14 sm:h-16 lg:h-20">
-            <CrossLines
-              crossPoints={CROSS_POINTS}
-              horizontalLengths={H_LENGTHS}
-              verticalLengths={V_LENGTHS}
-              horizontalCrossPosition="50%"
-              verticalCrossPosition="50%"
+          <div className="relative w-full flex items-center justify-center mt-4 sm:mt-6">
+            <CrossDivider
+              orientation="horizontal"
+              length="100%"
+              crossLength={fluid(40, 80)}
+              crossPosition={fluid(20, 40)}
+              thickness="1px"
+              color="#fff"
             />
+
             <div className="absolute px-4 sm:px-6 py-2 bg-black">
               <span className="text-base sm:text-lg text-white">
                 Preeti Toraskar, Founder
               </span>
             </div>
-          </div>
-
+          </div>{" "}
           <Reveal from="left" delay={0.75}>
             <div>
               <h2 className="italic font-bold text-white text-xl sm:text-2xl mt-4">
