@@ -5,6 +5,17 @@ import vintage2 from "../assets/vintage 2.svg";
 import CrossDivider from "../common/CrossDivider";
 import { fluid } from "../utils/Fluid";
 import { FAQOptions } from "../data/FAQOptions";
+import CrossLines from "../common/CrossLines";
+
+const CROSS_POINTS = {
+  base: { x: "88%", y: "45%" },
+  sm: { x: "80%", y: "10%" },
+  md: { x: "93%", y: "52%" },
+  lg: { x: "91%", y: "30%" },
+};
+
+const H_LENGTHS = { base: 120, sm: 160, md: 180, lg: 250 };
+const V_LENGTHS = { base: 40, sm: 55, md: 65, lg: 80 };
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -78,16 +89,25 @@ const FAQ = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex items-end justify-end">
-        <CrossDivider
+      {/* <div className="w-full flex items-end justify-end"> */}
+      {/* <CrossDivider
           orientation="horizontal"
           length="50%"
           crossLength={fluid(40, 80)}
           crossPosition="40%"
           thickness="1px"
           color="#fff"
-        />
-      </div>
+        /> */}
+
+      {/* Cross Divider */}
+      <CrossLines
+        crossPoints={CROSS_POINTS}
+        horizontalLengths={H_LENGTHS}
+        verticalLengths={V_LENGTHS}
+        horizontalCrossPosition="80%"
+        verticalCrossPosition="50%"
+      />
+      {/* </div> */}
     </section>
   );
 };

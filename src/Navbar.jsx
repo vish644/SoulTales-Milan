@@ -39,7 +39,7 @@ const Navbar = () => {
   };
 
   return (
-    <section className="absolute top-0 left-0 z-20 w-full">
+    <section className="absolute top-0 left-0 z-50 w-full">
       <div className="fixed top-0 left-1/2 w-full z-50 bg-white/4 -translate-x-1/2">
         <div className="   mx-auto flex max-w-360 items-center justify-between gap-6 px-5 py-2 sm:px-8 lg:gap-14 lg:px-10">
           {/* Logo */}

@@ -3,6 +3,17 @@ import FounderImg from "../assets/Founder.svg";
 import CrossDivider from "../common/CrossDivider";
 import { fluid } from "../utils/Fluid";
 import Reveal from "../common/Reveal";
+import CrossLines from "../common/CrossLines";
+
+const CROSS_POINTS = {
+  base: { x: "8%", y: "50%" },
+  sm: { x: "6%", y: "50%" },
+  md: { x: "5%", y: "50%" },
+  lg: { x: "5%", y: "50%" },
+};
+
+const H_LENGTHS = { base: "100%", sm: "100%", md: "100%", lg: "100%" };
+const V_LENGTHS = { base: 40, sm: 50, md: 65, lg: 80 };
 
 const Founder = () => {
   return (
@@ -36,25 +47,46 @@ const Founder = () => {
             </div>
           </Reveal>
 
-          <div className="relative w-full flex items-center justify-center mt-4 sm:mt-6">
-            <CrossDivider
-              orientation="horizontal"
-              length="100%"
-              crossLength={fluid(40, 80)}
-              crossPosition={fluid(20, 40)}
-              thickness="1px"
-              color="#fff"
+          {/* <div className="relative w-full flex items-center justify-center mt-4 sm:mt-6"> */}
+          {/* <div className="relative w-full flex items-center justify-center mt-4 sm:mt-6 h-16 sm:h-20 lg:h-50">
+           
+            <CrossLines
+              crossPoints={HERO_CROSS_POINTS}
+              horizontalLengths={H_LENGTHS}
+              verticalLengths={V_LENGTHS}
+              horizontalCrossPosition="50%"
+              verticalCrossPosition="80%"
             />
+
             <div className="absolute px-4 sm:px-6 py-2 bg-black">
               <span className="text-base sm:text-lg text-white ">
                 Preeti Toraskar, Founder
               </span>
             </div>
+          </div> */}
+
+          <div className="relative w-full flex items-center justify-center mt-4 sm:mt-6 h-14 sm:h-16 lg:h-20">
+            <CrossLines
+              crossPoints={CROSS_POINTS}
+              horizontalLengths={H_LENGTHS}
+              verticalLengths={V_LENGTHS}
+              horizontalCrossPosition="50%"
+              verticalCrossPosition="50%"
+            />
+            <div className="absolute px-4 sm:px-6 py-2 bg-black">
+              <span className="text-base sm:text-lg text-white">
+                Preeti Toraskar, Founder
+              </span>
+            </div>
           </div>
 
-          <h2 className="italic font-bold text-white text-xl sm:text-2xl mt-4">
-            "I don't give you answers. I help you remember your own."
-          </h2>
+          <Reveal from="left" delay={0.75}>
+            <div>
+              <h2 className="italic font-bold text-white text-xl sm:text-2xl mt-4">
+                "I don't give you answers. I help you remember your own."
+              </h2>
+            </div>
+          </Reveal>
         </div>
 
         <div className="w-48 h-60 sm:w-64 sm:h-80 lg:w-102 lg:h-125 shrink-0">
