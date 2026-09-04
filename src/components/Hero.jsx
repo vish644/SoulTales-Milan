@@ -12,9 +12,12 @@ import CrossLines from "../common/CrossLines";
 const HERO_CROSS_POINTS = {
   base: { x: "88%", y: "45%" },
   sm: { x: "80%", y: "10%" },
-  md: { x: "93%", y: "52%" },
-  lg: { x: "94%", y: "37%" },
+  md: { x: "92%", y: "60%" },
+  lg: { x: "92%", y: "35%" },
 };
+
+const H_LENGTHS = { base: 40, sm: 55, md: 65, lg: 80 };
+const V_LENGTHS = { base: 120, sm: 160, md: 180, lg: 200 };
 
 const Hero = () => {
   const location = useLocation();
@@ -71,6 +74,8 @@ const Hero = () => {
       {/* Cross Divider */}
       <CrossLines
         crossPoints={HERO_CROSS_POINTS}
+        horizontalLengths={H_LENGTHS}
+        verticalLengths={V_LENGTHS}
         horizontalCrossPosition="50%"
         verticalCrossPosition="80%"
       />

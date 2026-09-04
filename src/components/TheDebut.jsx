@@ -8,14 +8,12 @@ import Form from "../common/Form";
 import { IoMdClose } from "react-icons/io";
 
 const CROSS_POINTS = {
-  base: { x: "88%", y: "45%" },
+  base: { x: "88%", y: "52%" },
   sm: { x: "80%", y: "10%" },
-  md: { x: "93%", y: "52%" },
-  lg: { x: "93%", y: "34%" },
+  md: { x: "90%", y: "67%" },
+  lg: { x: "91%", y: "30%" },
 };
 
-// This page wants the opposite proportions from Hero:
-// a short vertical (80px) and a long horizontal (200px).
 const H_LENGTHS = { base: 120, sm: 160, md: 180, lg: 250 };
 const V_LENGTHS = { base: 40, sm: 55, md: 65, lg: 80 };
 

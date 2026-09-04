@@ -8,6 +8,19 @@ import CrossDivider from "../common/CrossDivider";
 import { fluid } from "../utils/Fluid";
 import Form from "../common/Form";
 import { IoMdClose } from "react-icons/io";
+import CrossLines from "../common/CrossLines";
+
+const CROSS_POINTS = {
+  base: { x: "11%", y: "45%" },
+  sm: { x: "8%", y: "10%" },
+  md: { x: "93%", y: "52%" },
+  lg: { x: "8%", y: "40%" },
+};
+
+// This page wants the opposite proportions from Hero:
+// a short vertical (80px) and a long horizontal (200px).
+const H_LENGTHS = { base: 120, sm: 160, md: 180, lg: 250 };
+const V_LENGTHS = { base: 40, sm: 55, md: 65, lg: 80 };
 
 const TheInvestment = () => {
     const [isFormOpen, setIsFormOpen] = useState(false);
@@ -71,6 +84,17 @@ const TheInvestment = () => {
             thickness="1px"
             color="#fff"
           />
+
+          {/* Cross Divider */}
+          {/* <CrossLines
+            crossPoints={CROSS_POINTS}
+            horizontalLengths={H_LENGTHS}
+            verticalLengths={V_LENGTHS}
+            horizontalCrossPosition="18%"
+            verticalCrossPosition="50%"
+            horizontalSweepFrom="right"
+          /> */}
+
           <div className="w-11/12 h-56 sm:h-72 md:h-96 lg:w-300">
             <img
               src={TheInvestmentImg}

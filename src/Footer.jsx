@@ -5,6 +5,17 @@ import Logo from "../src/assets/Final Soul Tales Logo.svg";
 import { fluid } from "./utils/Fluid";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { navOptions } from "./utils/scrollToSection";
+import CrossLines from "./common/CrossLines";
+
+const NAV_CROSS_POINTS = {
+  base: { x: "50%", y: "85%" },
+  sm: { x: "50%", y: "85%" },
+  md: { x: "50%", y: "85%" },
+  lg: { x: "5%", y: "50%" },
+};
+
+const H_LENGTHS = { base: "100%", sm: "100%", md: "100%", lg: "100%" };
+const V_LENGTHS = { base: "20cqw", sm: "20cqw", md: "20cqw", lg: "20cqw" };
 
 const Footer = () => {
   const navigate = useNavigate();

@@ -11,15 +11,15 @@ import { IoMdClose } from "react-icons/io";
 
 
 const CROSS_POINTS = {
-  base: { x: "88%", y: "45%" },
-  sm: { x: "80%", y: "10%" },
-  md: { x: "93%", y: "52%" },
-  lg: { x: "9%", y: "30%" },
+  base: { x: "11%", y: "42%" },
+  sm: { x: "11%", y: "42%" },
+  md: { x: "8%", y: "58%" },
+  lg: { x: "8%", y: "25%" },
 };
 
 // This page wants the opposite proportions from Hero:
 // a short vertical (80px) and a long horizontal (200px).
-const H_LENGTHS = { base: 120, sm: 160, md: 180, lg: 300 };
+const H_LENGTHS = { base: 120, sm: 160, md: 180, lg: 250 };
 const V_LENGTHS = { base: 40, sm: 55, md: 65, lg: 80 };
 
 const TheTension = () => {
@@ -78,8 +78,9 @@ const TheTension = () => {
         crossPoints={CROSS_POINTS}
         horizontalLengths={H_LENGTHS}
         verticalLengths={V_LENGTHS}
-        horizontalCrossPosition="28%"
+        horizontalCrossPosition="18%"
         verticalCrossPosition="50%"
+        horizontalSweepFrom="right"
       />
 
       <div className="max-w-360 mx-auto h-full flex flex-col gap-6 items-start justify-end text-white pb-10 sm:pb-14 lg:pb-20 px-5 sm:px-8 lg:px-10">
