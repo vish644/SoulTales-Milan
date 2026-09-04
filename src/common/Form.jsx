@@ -150,7 +150,7 @@
 
 // export default Form;
 
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Input from "./Input";
 import Button from "./Button";
@@ -214,6 +214,7 @@ const Form = () => {
       rules: {}, // optional field, no validation
     },
   ];
+    const [toast, setToast] = useState(null); 
 
   const allFields = [...gridFields, ...stackedFields];
 
@@ -229,14 +230,44 @@ const Form = () => {
     formState: { errors },
   } = useForm({ defaultValues });
 
-  const onSubmit = (data) => {
-    console.log("Submitted values:", data);
-    // send `data` to your API here
-    reset(defaultValues);
+    const showToast = (type, message) => {
+    setToast({ type, message });
+    setTimeout(() => setToast(null), 4000);
   };
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhDpO7AX61-qIA6yr5k_ufDgEVWxWplWgas8knzT_A181MA_5ej1jljF_k7vYRZMRi/exec";
+
+const onSubmit = async (data) => {
+  try {
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
+    });
+    reset(defaultValues);
+    showToast("success", "Application submitted! We'll be in touch soon.");
+  } catch (err) {
+    console.error("Submission failed:", err);
+    showToast("error", "Something went wrong. Please try again.");
+  }
+};
 
   return (
     <section className="flex flex-col w-full h-full max-h-[85vh] ">
+      {/* Toast */}
+      {toast && (
+        <div
+          className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 px-4 py-3 rounded-md text-sm shadow-lg transition-opacity duration-300 ${
+            toast.type === "success"
+              ? "bg-green-600 text-white"
+              : "bg-red-600 text-white"
+          }`}
+        >
+          {toast.message}
+        </div>
+      )}
       {/* Fixed header */}
       <div className="shrink-0 flex flex-col items-start gap-4 justify-center">
         <h2>Request Your Invitation</h2>

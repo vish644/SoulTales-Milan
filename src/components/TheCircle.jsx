@@ -1,11 +1,46 @@
-import React from "react";
+import React, { useState} from "react";
+import ReactDOM from "react-dom";
 import Button from "../common/Button";
-import TheCircleImg from "../assets/TheCircle.jpg";
+import TheCircleImg from "../assets/TheCircle.webp";
 import CrossDivider from "../common/CrossDivider";
 import { fluid } from "../utils/Fluid";
 import Reveal from "../common/Reveal";
+import Form from "../common/Form";
+import { IoMdClose } from "react-icons/io";
 
 const TheCircle = () => {
+    const [isFormOpen, setIsFormOpen] = useState(false);
+  
+    const handleOpenForm = () => {
+      setIsFormOpen(true);
+    };
+  
+    const closeForm = () => {
+      setIsFormOpen(false);
+    };
+
+      const formModal = isFormOpen
+    ? ReactDOM.createPortal(
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white/20 backdrop-blur-sm px-4"
+          onClick={closeForm}
+        >
+          <div
+            className="relative bg-black text-white w-full max-w-2xl max-h-[90vh] scrollbar-hide p-6 sm:p-8 border border-white/10 overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeForm}
+              className="absolute top-4 right-4 text-white/70 hover:text-white cursor-pointer"
+            >
+              <IoMdClose size={24} />
+            </button>
+            <Form />
+          </div>
+        </div>,
+        document.body,
+      )
+    : null;
   return (
     <section
       id="the-circle"
@@ -43,10 +78,12 @@ const TheCircle = () => {
           </Reveal>
 
           <Reveal from="bottom" delay={0.5}>
-            <Button />
+            <Button onClick={handleOpenForm}/>
           </Reveal>
         </div>
       </div>
+            {/* Form */}
+      {formModal}
     </section>
   );
 };

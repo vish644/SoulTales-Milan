@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useState} from "react";
+import ReactDOM from "react-dom";
 import Button from "../common/Button";
 import CinematicFilm from "../assets/CinematicFilm.svg";
 import EditionMark from "../assets/MilanEditionMark.svg";
@@ -9,6 +10,8 @@ import vintage from "../assets/vintage 1.svg";
 import vintage2 from "../assets/vintage 2.svg";
 import { fluid } from "../utils/Fluid";
 import Reveal from "../common/Reveal";
+import Form from "../common/Form";
+import { IoMdClose } from "react-icons/io";
 
 const ProofPoint = ({ image, heading, description, divider }) => (
   <div className="flex flex-col items-center justify-center gap-2 sm:gap-4">
@@ -29,6 +32,16 @@ const ProofPoint = ({ image, heading, description, divider }) => (
 );
 
 const Proof = () => {
+    const [isFormOpen, setIsFormOpen] = useState(false);
+  
+    const handleOpenForm = () => {
+      setIsFormOpen(true);
+    };
+  
+    const closeForm = () => {
+      setIsFormOpen(false);
+    };
+  
   const sectionOne = [
     {
       image: CinematicFilm,
@@ -79,6 +92,29 @@ const Proof = () => {
     },
   ];
 
+    const formModal = isFormOpen
+      ? ReactDOM.createPortal(
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-white/20 backdrop-blur-sm px-4"
+            onClick={closeForm}
+          >
+            <div
+              className="relative bg-black text-white w-full max-w-2xl max-h-[90vh] scrollbar-hide p-6 sm:p-8 border border-white/10 overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={closeForm}
+                className="absolute top-4 right-4 text-white/70 hover:text-white cursor-pointer"
+              >
+                <IoMdClose size={24} />
+              </button>
+              <Form />
+            </div>
+          </div>,
+          document.body,
+        )
+      : null;
+
   return (
     <div id="proof" className="bg-black w-full">
       <section className="max-w-360 mx-auto text-white grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 text-center px-5 sm:px-8 lg:px-10 py-12 md:py-10">
@@ -93,7 +129,7 @@ const Proof = () => {
             come back with photos of a holiday. You come back with the evidence
             that changes your price.
           </p>
-          <Button />
+          <Button onClick={handleOpenForm}/>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 max-w-sm mx-auto">
@@ -112,6 +148,8 @@ const Proof = () => {
           ))}
         </div>
       </section>
+            {/* Form */}
+      {formModal}
     </div>
   );
 };

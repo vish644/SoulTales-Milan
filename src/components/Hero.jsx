@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Button from "../common/Button";
-import HeroImg from "../assets/Hero.jpg";
+import HeroImg from "../assets/Hero.webp";
 import Navbar from "../Navbar";
 import Form from "../common/Form";
 import { IoMdClose } from "react-icons/io";

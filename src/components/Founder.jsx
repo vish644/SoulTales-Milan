@@ -6,12 +6,12 @@ import Reveal from "../common/Reveal";
 
 const Founder = () => {
   return (
-    <section
-      id="founder-preeti"
-      className="bg-black py-12 sm:py-16 px-5 sm:px-8 lg:px-10"
-    >
-      <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-16">
-        <div className="flex flex-col items-center text-center gap-5 sm:gap-6 max-w-7xl lg:pt-6">
+<section
+  id="founder-preeti"
+  className="bg-black py-12 sm:py-16 px-0 sm:px-8 lg:px-10"
+>
+<div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-0 sm:gap-10 lg:gap-16">
+<div className="flex flex-col items-center text-center gap-5 sm:gap-6 max-w-7xl lg:pt-6 px-5 sm:px-0">
           <h1 className="text-center text-white">Why I Built This</h1>
 
           <Reveal from="left" delay={0.75}>
@@ -57,13 +57,14 @@ const Founder = () => {
           </h2>
         </div>
 
-        <div className="w-48 h-60 sm:w-64 sm:h-80 lg:w-102 lg:h-125 shrink-0">
-          <img
-            src={FounderImg}
-            alt="Preeti Toraskar"
-            className="w-full h-full object-cover"
-          />
-        </div>
+<div className="relative w-full h-[420px] sm:w-64 sm:h-80 lg:w-102 lg:h-125 shrink-0">
+  <img
+    src={FounderImg}
+    alt="Preeti Toraskar"
+    className="w-full h-full object-cover"
+  />
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black sm:hidden" />
+</div>
       </div>
     </section>
   );
