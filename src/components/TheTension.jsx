@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
-import TheTensionImg from "../assets/TheTension.jpg";
+import React, { useEffect, useState } from "react";
+import TheTensionImg from "../assets/TheTension.webp";
 import Button from "../common/Button";
 import CrossDivider from "../common/CrossDivider";
 import Reveal from "../common/Reveal";
 import { useLocation } from "react-router-dom";
 import CrossLines from "../common/CrossLines";
+import Form from "../common/Form";
+import ReactDOM from "react-dom";
+import { IoMdClose } from "react-icons/io";
+
 
 const CROSS_POINTS = {
   base: { x: "11%", y: "42%" },
@@ -21,6 +25,16 @@ const V_LENGTHS = { base: 40, sm: 55, md: 65, lg: 80 };
 const TheTension = () => {
   const location = useLocation();
 
+    const [isFormOpen, setIsFormOpen] = useState(false);
+  
+    const handleOpenForm = () => {
+      setIsFormOpen(true);
+    };
+  
+    const closeForm = () => {
+      setIsFormOpen(false);
+    };
+
   useEffect(() => {
     if (location.state?.scrollTo) {
       const el = document.getElementById(location.state.scrollTo);
@@ -28,6 +42,29 @@ const TheTension = () => {
       window.history.replaceState({}, document.title);
     }
   }, [location.state]);
+
+    const formModal = isFormOpen
+      ? ReactDOM.createPortal(
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-white/20 backdrop-blur-sm px-4"
+            onClick={closeForm}
+          >
+            <div
+              className="relative bg-black text-white w-full max-w-2xl max-h-[90vh] scrollbar-hide p-6 sm:p-8 border border-white/10 overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={closeForm}
+                className="absolute top-4 right-4 text-white/70 hover:text-white cursor-pointer"
+              >
+                <IoMdClose size={24} />
+              </button>
+              <Form />
+            </div>
+          </div>,
+          document.body,
+        )
+      : null;
   return (
     <section
       id="tension"
@@ -81,10 +118,12 @@ const TheTension = () => {
           </Reveal>
 
           <Reveal from="right" delay={0.75}>
-            <Button />
+                        <Button onClick={handleOpenForm} />
           </Reveal>
         </div>
       </div>
+            {/* Form */}
+      {formModal}
     </section>
   );
 };

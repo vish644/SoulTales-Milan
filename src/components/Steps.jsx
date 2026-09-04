@@ -1,12 +1,15 @@
-import React from "react";
-import ArriveImg from "../assets/Arrive.jpg";
-import ImmerseImg from "../assets/Immerse.jpg";
-import SharpenImg from "../assets/Sharpen.jpg";
-import WanderImg from "../assets/Wander.jpg";
-import TheRevealImg from "../assets/TheReveal.jpg";
-import Return from "../assets/Return.jpg";
+import React,{ useState} from "react";
+import ReactDOM from "react-dom";
+import ArriveImg from "../assets/Arrive.webp";
+import ImmerseImg from "../assets/Immerse.webp";
+import SharpenImg from "../assets/Sharpen.webp";
+import WanderImg from "../assets/Wander.webp";
+import TheRevealImg from "../assets/TheReveal.webp";
+import Return from "../assets/Return.webp";
 import Button from "../common/Button";
 import CrossLines from "../common/CrossLines";
+import Form from "../common/Form";
+import { IoMdClose } from "react-icons/io";
 
 const Steps = () => {
   const stepsData = [
@@ -55,6 +58,39 @@ const Steps = () => {
     lg: { x: "94%", y: "85%" },
   };
 
+    const [isFormOpen, setIsFormOpen] = useState(false);
+  
+    const handleOpenForm = () => {
+      setIsFormOpen(true);
+    };
+  
+    const closeForm = () => {
+      setIsFormOpen(false);
+    };
+
+    const formModal = isFormOpen
+    ? ReactDOM.createPortal(
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white/20 backdrop-blur-sm px-4"
+          onClick={closeForm}
+        >
+          <div
+            className="relative bg-black text-white w-full max-w-2xl max-h-[90vh] scrollbar-hide p-6 sm:p-8 border border-white/10 overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={closeForm}
+              className="absolute top-4 right-4 text-white/70 hover:text-white cursor-pointer"
+            >
+              <IoMdClose size={24} />
+            </button>
+            <Form />
+          </div>
+        </div>,
+        document.body,
+      )
+    : null;
+
   return (
     <section
       id="steps"
@@ -76,7 +112,7 @@ const Steps = () => {
                   <h1>{data.heading}</h1>
                 </div>
                 <p>{data.info}</p>
-                <Button />
+                <Button onClick={handleOpenForm} />
               </div>
               {/* Cross Divider */}
               <CrossLines
@@ -88,6 +124,8 @@ const Steps = () => {
           </div>
         ))}
       </div>
+            {/* Form */}
+      {formModal}
     </section>
   );
 };
