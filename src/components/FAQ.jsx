@@ -43,7 +43,7 @@ const FAQ = () => {
                 className="max-w-5xl w-full mx-auto flex flex-col items-center gap-3"
               >
                 <h3
-                  className={`flex items-center cursor-pointer justify-between gap-4 text-sm sm:text-lg lg:text-xl w-full font-heading`}
+                  className={`flex items-center cursor-pointer justify-between gap-4 text-base sm:text-lg lg:text-xl w-full font-heading`}
                   onClick={() => handleToggle(index)}
                 >
                   {data.que}

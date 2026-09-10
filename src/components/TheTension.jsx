@@ -57,16 +57,16 @@ const TheTension = () => {
       id="tension"
       ref={containerRef}
       className="
-    bg-cover bg-center w-full text-white h-screen relative isolate
-    before:absolute before:inset-0
-    before:bg-[image:var(--bg-image)]
-    before:bg-cover before:bg-center 
-    before:-z-10
-    after:absolute after:inset-0
-    after:bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0)_100%)]
-    after:-z-[5]
-    max-md:after:bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
-  "
+      bg-cover bg-center w-full text-white h-screen relative isolate
+      before:absolute before:inset-0
+      before:bg-[image:var(--bg-image)]
+      before:bg-cover before:bg-center
+      before:-z-10
+      after:absolute after:inset-0
+      after:bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0)_100%)]
+      after:-z-[5]
+      max-md:after:bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
+    "
       style={{
         "--bg-image": `url(${TheTensionImg})`,
       }}

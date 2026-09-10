@@ -862,7 +862,8 @@ const Steps = () => {
             className="
               shrink-0
               snap-start
-              w-screen
+              
+                w-[85vw]
               md:w-[90vw]
               md:h-screen
               relative
@@ -936,7 +937,7 @@ const Steps = () => {
                   className="
                     absolute
                     inset-0
-                    w-full
+                     w-full
                     h-full
                     object-cover
                     object-top
