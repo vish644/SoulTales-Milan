@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Button from "../common/Button";
-import TheInvestmentImg from "../assets/TheInvestmentImg.jpg";
+import TheInvestmentImg from "../assets/WebpImages-SoulTales-Milan/TheInvestmentImg.webp";
 import CrossDivider from "../common/CrossDivider";
 import { fluid } from "../utils/fluid.js";
 import { IoMdClose } from "react-icons/io";

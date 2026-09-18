@@ -1,16 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import ArriveImg from "../assets/ArriveImg.jpg";
-import ImmerseImg from "../assets/ImmerseImg.jpg";
-import SharpenImg from "../assets/SharpenImg.jpg";
-import WanderImg from "../assets/WanderImg.jpg";
-import TheRevealImg from "../assets/TheRevealImg.jpg";
-import Return from "../assets/ReturnImg.jpg";
 import Button from "../common/Button";
 import CrossLines from "../common/CrossLines";
 import { IoMdClose } from "react-icons/io";
 import ReactDOM from "react-dom";
 import Form from "../common/Form";
+
+// Images
+import ArriveImg from "../assets/WebpImages-SoulTales-Milan/Arrive.webp";
+import ImmerseImg from "../assets/WebpImages-SoulTales-Milan/Immerse.webp";
+import SharpenImg from "../assets/WebpImages-SoulTales-Milan/Sharpen.webp";
+import WanderImg from "../assets/WebpImages-SoulTales-Milan/Wander.webp";
+import TheRevealImg from "../assets/WebpImages-SoulTales-Milan/TheReveal.webp";
+import Return from "../assets/WebpImages-SoulTales-Milan/Return.webp";
 
 const Steps = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import TheTensionImg from "../assets/TheTensionImg.jpg";
+import TheTensionImg from "../assets/WebpImages-SoulTales-Milan/TheTension.webp";
 import Button from "../common/Button";
 import Reveal from "../common/Reveal";
 import { useLocation } from "react-router-dom";

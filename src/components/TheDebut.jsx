@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Button from "../common/Button";
-import TheDebutImg from "../assets/TheDebutImg.jpg";
+import TheDebutImg from "../assets/WebpImages-SoulTales-Milan/TheDebut.webp";
 import Reveal from "../common/Reveal";
-import CrossLines from "../common/CrossLines";
 import { IoMdClose } from "react-icons/io";
 import ReactDOM from "react-dom";
 import Form from "../common/Form";

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import Button from "../common/Button";
-import ContactImg from "../assets/ContactImg.jpg";
+import ContactImg from "../assets/WebpImages-SoulTales-Milan/Contact.webp";
 import Reveal from "../common/Reveal";
 import { IoMdClose } from "react-icons/io";
 import ReactDOM from "react-dom";

@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Button from "../common/Button";
-import TheCircleImg from "../assets/TheCircleImg.jpg";
-import CrossDivider from "../common/CrossDivider";
-import { fluid } from "../utils/fluid.js";
+import TheCircleImg from "../assets/WebpImages-SoulTales-Milan/TheCircle.webp";
+
 import Reveal from "../common/Reveal";
 import { IoMdClose } from "react-icons/io";
 import ReactDOM from "react-dom";
