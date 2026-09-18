@@ -8,7 +8,7 @@ import Declartion from "../assets/Declaration.svg";
 import CrossDivider from "../common/CrossDivider";
 import vintage from "../assets/vintage 1.svg";
 import vintage2 from "../assets/vintage 2.svg";
-import { fluid } from "../utils/Fluid";
+import { fluid } from "../utils/fluid.js";
 import Reveal from "../common/Reveal";
 import Form from "../common/Form";
 import { IoMdClose } from "react-icons/io";

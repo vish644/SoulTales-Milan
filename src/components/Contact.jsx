@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Button from "../common/Button";
 import ContactImg from "../assets/ContactImg.jpg";
 import CrossDivider from "../common/CrossDivider";
-import { fluid } from "../utils/Fluid";
+import { fluid } from "../utils/fluid.js";
 import Reveal from "../common/Reveal";
 import CrossLines from "../common/CrossLines";
 import { IoMdClose } from "react-icons/io";

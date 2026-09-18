@@ -3,7 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import vintage from "../assets/vintage 1.svg";
 import vintage2 from "../assets/vintage 2.svg";
 import CrossDivider from "../common/CrossDivider";
-import { fluid } from "../utils/Fluid";
+import { fluid } from "../utils/fluid.js";
 import { FAQOptions } from "../data/FAQOptions";
 import CrossLines from "../common/CrossLines";
 

@@ -2,7 +2,7 @@ import React from "react";
 import CrossDivider from "../common/CrossDivider";
 import vintage from "../assets/vintage 1.svg";
 import vintage2 from "../assets/vintage 2.svg";
-import { fluid } from "../utils/Fluid";
+import { fluid } from "../utils/fluid.js";
 import CrossLines from "../common/CrossLines";
 import Reveal from "../common/Reveal";
 

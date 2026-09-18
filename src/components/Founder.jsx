@@ -1,7 +1,7 @@
 import React from "react";
 import FounderImg from "../assets/Founder.svg";
 import CrossDivider from "../common/CrossDivider";
-import { fluid } from "../utils/Fluid";
+import { fluid } from "../utils/fluid.js";
 import Reveal from "../common/Reveal";
 
 const Founder = () => {

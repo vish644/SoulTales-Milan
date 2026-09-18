@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import Button from "../common/Button";
-import TheInvestmentImg from "../assets/TheInvestmentImg.JPG";
+import TheInvestmentImg from "../assets/TheInvestmentImg.jpg";
 import CrossDivider from "../common/CrossDivider";
-import { fluid } from "../utils/Fluid";
+import { fluid } from "../utils/fluid.js";
 import CrossLines from "../common/CrossLines";
 import { IoMdClose } from "react-icons/io";
 import ReactDOM from "react-dom";

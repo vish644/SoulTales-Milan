@@ -7,7 +7,7 @@ import Collections from "../assets/Collections.svg";
 import CrossDivider from "../common/CrossDivider";
 import vintage from "../assets/vintage 1.svg";
 import vintage2 from "../assets/vintage 2.svg";
-import { fluid } from "../utils/Fluid";
+import { fluid } from "../utils/fluid.js";
 import Reveal from "../common/Reveal";
 import { IoMdClose } from "react-icons/io";
 import ReactDOM from "react-dom";

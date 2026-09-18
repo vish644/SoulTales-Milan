@@ -3,7 +3,7 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import CrossDivider from "./common/CrossDivider";
 import Logo from "../src/assets/Final Soul Tales Logo.svg";
-import { fluid } from "./utils/Fluid";
+import { fluid } from "./utils/fluid.js";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { navOptions } from "./utils/scrollToSection";
 import CrossLines from "./common/CrossLines";
