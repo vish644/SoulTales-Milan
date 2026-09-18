@@ -3,7 +3,6 @@ import CrossDivider from "../common/CrossDivider";
 import vintage from "../assets/vintage 1.svg";
 import vintage2 from "../assets/vintage 2.svg";
 import { fluid } from "../utils/fluid.js";
-import CrossLines from "../common/CrossLines";
 import Reveal from "../common/Reveal";
 
 const HERO_CROSS_POINTS = {
@@ -47,15 +46,6 @@ const Credibility = () => {
                 color="#fff"
               />
             </div>
-
-            {/* Cross Divider */}
-            {/* <CrossLines
-              crossPoints={HERO_CROSS_POINTS}
-              horizontalLengths={H_LENGTHS}
-              verticalLengths={V_LENGTHS}
-              horizontalCrossPosition="50%"
-              verticalCrossPosition="80%"
-            /> */}
             <Reveal from="right" delay={0.75}>
               <h3 className="text-center font-heading text-base">
                 In Partnership With A Leading Milan Fashion Institute

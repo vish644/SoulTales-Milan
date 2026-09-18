@@ -54,7 +54,8 @@ const TheDebut = () => {
     //     id="the-debut"
     //     ref={containerRef}
     //     className="
-    //   bg-cover bg-center w-full text-white h-screen relative isolate
+    //   bg-image:var(--bg-image-desktop) bg-cover bg-position-[25%]
+    //   w-full text-white h-screen relative isolate
 
     //   before:absolute before:inset-0
     //   before:bg-[linear-gradient(280deg,#000000_0%,rgba(0,0,0,0)_100%)]
@@ -62,13 +63,14 @@ const TheDebut = () => {
 
     //   after:absolute after:inset-0
     //   after:bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
-    //   after:-z-[5]
+    //   after:z-[-5]
 
+    //   max-md:bg-image:var(--bg-image-mobile)
     //   max-md:before:bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0)_100%)]
     // "
     //     style={{
-    //       backgroundImage: `url(${TheDebutImg})`,
-    //       backgroundPosition: "25%",
+    //       "--bg-image-desktop": `url(${TheDebutImg})`,
+    //       "--bg-image-mobile": `url(${TheDebutImg})`,
     //     }}
     //   >
 
@@ -76,7 +78,7 @@ const TheDebut = () => {
       id="the-debut"
       ref={containerRef}
       className="
-    bg-image:var(--bg-image-desktop) bg-cover bg-position-[25%]
+    bg-[image:var(--bg-image-desktop)] bg-cover bg-[position:25%]
     w-full text-white h-screen relative isolate
 
     before:absolute before:inset-0
@@ -85,9 +87,9 @@ const TheDebut = () => {
 
     after:absolute after:inset-0
     after:bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
-    after:z-[-5]
+    after:-z-[5]
 
-    max-md:bg-image:var(--bg-image-mobile)
+    max-md:bg-[image:var(--bg-image-mobile)]
     max-md:before:bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0)_100%)]
   "
       style={{
@@ -95,15 +97,6 @@ const TheDebut = () => {
         "--bg-image-mobile": `url(${TheDebutImg})`,
       }}
     >
-      {/* Cross Divider */}
-      {/* <CrossLines
-        crossPoints={CROSS_POINTS}
-        horizontalLengths={H_LENGTHS}
-        verticalLengths={V_LENGTHS}
-        horizontalCrossPosition="80%"
-        verticalCrossPosition="50%"
-      /> */}
-
       <AnchoredCross
         containerRef={containerRef}
         anchorRef={headingRef}

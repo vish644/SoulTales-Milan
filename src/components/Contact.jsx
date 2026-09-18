@@ -1,10 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Button from "../common/Button";
 import ContactImg from "../assets/ContactImg.jpg";
-import CrossDivider from "../common/CrossDivider";
-import { fluid } from "../utils/fluid.js";
 import Reveal from "../common/Reveal";
-import CrossLines from "../common/CrossLines";
 import { IoMdClose } from "react-icons/io";
 import ReactDOM from "react-dom";
 import Form from "../common/Form";
@@ -53,30 +50,6 @@ const Contact = () => {
       )
     : null;
   return (
-    // <section
-    //   id="contact"
-    //   ref={containerRef}
-    //   className="
-    //     bg-cover bg-center text-white w-full h-screen relative isolate
-
-    //     before:absolute before:inset-0
-    //     before:bg-[image:var(--bg-image)]
-    //     before:bg-cover
-    //     before:bg-center
-    //     before:-z-10
-
-    //     after:absolute after:inset-0
-    //     after:bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0)_100%)]
-    //     after:-z-[5]
-
-    //     max-md:after:bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
-    //   "
-    //   style={{
-    //     backgroundImage: `url(${ContactImg})`,
-    //     backgroundPosition: "60%",
-    //   }}
-    // >
-
     <section
       id="contact"
       ref={containerRef}
@@ -84,16 +57,17 @@ const Contact = () => {
         text-white w-full h-screen relative isolate
 
         before:absolute before:inset-0
-        before:bg-image:var(--bg-image-desktop)
+        before:bg-[image:var(--bg-image-desktop)]
         before:bg-cover
-        before:bg-position-[60%]
+        before:bg-[position:60%_center]
         before:-z-10
 
         after:absolute after:inset-0
         after:bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0)_100%)]
-        after:z-[-5]
+        after:-z-[5]
 
-        max-md:before:bg-image:var(--bg-image-mobile)
+        max-md:before:bg-[image:var(--bg-image-mobile)]
+        max-md:before:bg-[position:60%_top]
         max-md:after:bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
       "
       style={{

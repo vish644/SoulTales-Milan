@@ -3,7 +3,6 @@ import Button from "../common/Button";
 import TheInvestmentImg from "../assets/TheInvestmentImg.jpg";
 import CrossDivider from "../common/CrossDivider";
 import { fluid } from "../utils/fluid.js";
-import CrossLines from "../common/CrossLines";
 import { IoMdClose } from "react-icons/io";
 import ReactDOM from "react-dom";
 import Form from "../common/Form";
