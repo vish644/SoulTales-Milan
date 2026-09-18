@@ -53,14 +53,39 @@ const TheCircle = () => {
       )
     : null;
   return (
+    //   <section
+    //     id="the-circle"
+    //     ref={containerRef}
+    //     className="
+    //   text-white w-full h-screen relative isolate bg-black
+
+    //   before:absolute before:bg-cover before:bg-[position:58%_center] before:-z-10
+    //   before:bg-[image:var(--bg-image)]
+    //   before:inset-x-0
+    //   before:inset-y-16
+    //   sm:before:inset-y-12
+    //   md:before:inset-y-8
+    //   lg:before:inset-y-4
+    //   xl:before:inset-y-0
+
+    //   after:absolute after:inset-0
+    //   after:bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0)_100%)]
+    //   after:-z-[5]
+    //   max-md:after:bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
+    // "
+    //     style={{
+    //       "--bg-image": `url(${TheCircleImg})`,
+    //     }}
+    //   >
+
     <section
       id="the-circle"
       ref={containerRef}
       className="
     text-white w-full h-screen relative isolate bg-black
 
-    before:absolute before:bg-cover before:bg-[position:58%_center] before:-z-10
-    before:bg-[image:var(--bg-image)]
+    before:absolute before:bg-cover before:bg-position-[58%_center] before:-z-10
+    before:bg-image:var(--bg-image-desktop)
     before:inset-x-0
     before:inset-y-16
     sm:before:inset-y-12
@@ -70,11 +95,14 @@ const TheCircle = () => {
 
     after:absolute after:inset-0
     after:bg-[linear-gradient(90deg,#000000_0%,rgba(0,0,0,0)_100%)]
-    after:-z-[5]
+    after:z-[-5]
     max-md:after:bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0)_100%),linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
+
+    max-md:before:bg-image:var(--bg-image-mobile)
   "
       style={{
-        "--bg-image": `url(${TheCircleImg})`,
+        "--bg-image-desktop": `url(${TheCircleImg})`,
+        "--bg-image-mobile": `url(${TheCircleImg})`,
       }}
     >
       <div className="max-w-360 mx-auto h-full flex flex-col gap-6 items-start justify-center max-md:justify-end text-white pb-10 sm:pb-14 lg:pb-20 px-5 sm:px-8 lg:px-10">

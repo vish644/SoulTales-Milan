@@ -8,16 +8,6 @@ import ReactDOM from "react-dom";
 import Form from "../common/Form";
 import AnchoredCross from "../common/AnchoredCross";
 
-// const CROSS_POINTS = {
-//   base: { x: "80%", y: "40%" },
-//   sm: { x: "80%", y: "10%" },
-//   md: { x: "90%", y: "67%" },
-//   lg: { x: "91%", y: "30%" },
-// };
-
-// const H_LENGTHS = { base: 120, sm: 160, md: 180, lg: 250 };
-// const V_LENGTHS = { base: 50, sm: 55, md: 65, lg: 80 };
-
 const TheDebut = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const containerRef = useRef(null);
@@ -60,11 +50,34 @@ const TheDebut = () => {
       )
     : null;
   return (
+    //   <section
+    //     id="the-debut"
+    //     ref={containerRef}
+    //     className="
+    //   bg-cover bg-center w-full text-white h-screen relative isolate
+
+    //   before:absolute before:inset-0
+    //   before:bg-[linear-gradient(280deg,#000000_0%,rgba(0,0,0,0)_100%)]
+    //   before:z-0
+
+    //   after:absolute after:inset-0
+    //   after:bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
+    //   after:-z-[5]
+
+    //   max-md:before:bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0)_100%)]
+    // "
+    //     style={{
+    //       backgroundImage: `url(${TheDebutImg})`,
+    //       backgroundPosition: "25%",
+    //     }}
+    //   >
+
     <section
       id="the-debut"
       ref={containerRef}
       className="
-    bg-cover bg-center w-full text-white h-screen relative isolate
+    bg-image:var(--bg-image-desktop) bg-cover bg-position-[25%]
+    w-full text-white h-screen relative isolate
 
     before:absolute before:inset-0
     before:bg-[linear-gradient(280deg,#000000_0%,rgba(0,0,0,0)_100%)]
@@ -72,13 +85,14 @@ const TheDebut = () => {
 
     after:absolute after:inset-0
     after:bg-[linear-gradient(0deg,rgba(0,0,0,0.2),rgba(0,0,0,0.2))]
-    after:-z-[5]
+    after:z-[-5]
 
+    max-md:bg-image:var(--bg-image-mobile)
     max-md:before:bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0)_100%)]
   "
       style={{
-        backgroundImage: `url(${TheDebutImg})`,
-        backgroundPosition: "25%",
+        "--bg-image-desktop": `url(${TheDebutImg})`,
+        "--bg-image-mobile": `url(${TheDebutImg})`,
       }}
     >
       {/* Cross Divider */}
